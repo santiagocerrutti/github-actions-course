@@ -8,7 +8,7 @@ on:
       - stage
       - "release/**"
 jobs:
-  hola-mundo:
+  hola-mundo-on-triggers:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
