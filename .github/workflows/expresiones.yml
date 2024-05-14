@@ -12,7 +12,8 @@ on:
         type: string
 jobs:
   expressions-main-job:
-    if: contains(${{inputs.str1}}, ${{inputs.str2}})
+    if: ${{ contains(inputs.str1, inputs.str2) }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "str2 is contained in str1"
+      - run: echo ${{ contains(inputs.str1, inputs.str2) }}

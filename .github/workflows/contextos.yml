@@ -1,0 +1,8 @@
+name: contexts
+on:
+  - pull_request
+jobs:
+  contexts:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ env }}
