@@ -12,7 +12,7 @@ on:
         type: string
 jobs:
   expressions-main-job:
-    runs-on: ubuntu-latest
     if: contains(${{inputs.str1}}, ${{inputs.str2}})
+    runs-on: ubuntu-latest
     steps:
       - run: echo "str2 is contained in str1"
