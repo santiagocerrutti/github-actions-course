@@ -1,6 +1,6 @@
 name: contexts
 on:
-  - pull_request
+  - push
 jobs:
   contexts:
     runs-on: ubuntu-latest
