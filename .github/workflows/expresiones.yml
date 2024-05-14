@@ -1,0 +1,18 @@
+name: expressions
+on:
+  workflow_dispatch:
+    inputs:
+      str1:
+        description: "main string"
+        required: true
+        type: string
+      str2:
+        description: "substring"
+        required: true
+        type: string
+jobs:
+  expressions-main-job:
+    runs-on: ubuntu-latest
+    if: contains(${{inputs.str1}}, ${{inputs.str2}})
+    steps:
+      - run: echo "str2 is contained in str1"
