@@ -1,0 +1,11 @@
+name: variables
+on:
+  - push
+jobs:
+  print-env:
+    env:
+      CUSTOM_VAR: custom-value
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Branch name -> ${{ github.ref_name }}"
+      - run: echo "Custom env var -> ${{ env.CUSTOM_VAR }}"
